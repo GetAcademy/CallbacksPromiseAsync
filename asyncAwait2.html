@@ -11,10 +11,10 @@
     <script>
         doIt();
         async function doIt() {
-            for (let green = 0; green < 250; green += 25) {
-                document.body.style.backgroundColor = `rgb(127, ${green}, 127)`;
+            for (let green = 0; green < 256; green ++) {
+                document.body.style.backgroundColor = `rgb(${255-green}, ${green}, 127)`;
                 // if (!confirm('neste')) return;
-                await new Promise(resolve => setTimeout(resolve, 1000));    
+                await new Promise(resolve => setTimeout(resolve, 50));    
             }
         }
     </script>
