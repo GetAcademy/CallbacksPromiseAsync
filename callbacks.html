@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button onclick="doCount(finishedEffect('green'))">Tell 1</button>
+    <button onclick="doCount(finishedEffect('red'))">Tell 2</button> -->
+    <button onclick="doCount(finishedEffect1)">Tell 1</button>
+    <button onclick="doCount(finishedEffect2)">Tell 2</button>
+    <script>
+        //setTimeout(finishedEffect2, 3000);
+
+        
+        let count = 0;
+
+        function doCount(callbackFunction) {
+            count++;
+            if (count == 5) {
+                callbackFunction();
+            }
+        }
+
+        function finishedEffect1() {
+            document.body.style.backgroundColor = 'green';
+        }
+
+        function finishedEffect2() {
+            document.body.style.backgroundColor = 'red';
+        }
+
+        // function finishedEffect(color) {
+        //     return function () {
+        //         document.body.style.backgroundColor = color;
+        //     }
+        // }
+
+        // Versjon 1
+        // let count = 0;
+
+        // function doCount() {
+        //     count++;
+        //     if (count == 5) {
+        //         document.body.style.backgroundColor = 'green';
+        //     }
+        // }
+
+        /*
+            1: Callback
+            2: Promise
+            3: Async og await
+        */
+    </script>
+</body>
+
+</html>
